@@ -1,0 +1,139 @@
+.widget {
+	margin: 0em;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include font-size(1.125);
+
+	.widget-title {
+		display: inline-block;
+		margin: 0;
+		margin-bottom: 1.5rem;
+		padding-bottom: 2px;
+		border-bottom: 2px solid;
+	}
+	ul,
+	ul.sub-menu,
+	ul.children {
+		margin-left: 24px;
+		margin-left: 1.5rem;
+	}
+	li:not(:first-child) {
+		margin-top: 8px;
+		margin-top: 0.5rem;
+	}
+	&.widget_recent_comments,
+	&.widget_categories,
+	&.widget_archive,
+	&.widget_recent_entries,
+	&.widget_rss,
+	&.widget_meta,
+	&.widget_pages,
+	&.widget_links,
+	&.widget_nav_menu {
+		ul {
+			margin: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+		ul.sub-menu,
+		ul.children {
+			margin-left: 24px;
+			margin-left: 1.5rem;
+			li {
+				margin-top: 8px;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+	&.widget_recent_comments,
+	&.widget_recent_entries,
+	&.widget_categories,
+	&.widget_archive,
+	&.widget_rss,
+	&.widget_meta,
+	&.widget_pages,
+	&.widget_links {
+		li {
+			padding-bottom: 4px;
+		}
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+	&.widget_calendar {
+		caption {
+			margin-bottom: 4px;
+		}
+		tbody td {
+			text-align: center;
+		}
+	}
+	&.widget_tag_cloud {
+		a {
+			
+		}
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Styles for Jetpack widgets. */
+.widget-grofile .widget-title  {
+	padding-bottom: 20px;
+}
+.widget_contact_info {
+	.contact-map {
+		margin-bottom: 20px;
+	}
+	.confit-address,
+	.confit-phone {
+		margin-bottom: 8px;
+	}
+}
+
+#secondary .widget.widget_tag_cloud a {
+	border-color: currentcolor;
+}
+
+.widget.jetpack_subscription_widget {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 24px 20px;
+	font-size: 90%;
+	border-top: none !important;
+	color: $color__text-blog;
+	background: $color__background-blog;
+
+	input[type=email] {
+		padding: 8px;
+		border: 1px solid currentcolor;
+	}
+
+	input[type="submit"] {
+		color: white;
+		border-color: currentColor;
+
+		&:hover,
+		&:focus {
+			color: $color__link-footer-hover;
+			border-color: currentColor;
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	#secondary-inner .widget:first-child {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: $breakpoint-full) {
+	#secondary-inner .widget:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}

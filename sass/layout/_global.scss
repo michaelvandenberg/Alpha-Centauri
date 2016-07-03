@@ -1,0 +1,152 @@
+/* Site width. */
+.single .site-content,
+.search .site-content,
+.error404 .site-content,
+.article-inner,
+.footer-inner {
+	@include site-width();
+}
+
+/* Content width. */
+.page-content,
+.entry-header,
+.entry-summary,
+.entry-footer,
+.entry-content p,
+.entry-content ul,
+.entry-content ol,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content pre,
+.entry-content table,
+.entry-content dl,
+.entry-content form,
+.entry-content address,
+.entry-content details,
+.entry-content iframe,
+.pagination .nav-links,
+.site-content .navigation,
+.site-content .author-info,
+.site-content #comments,
+.site-content #after-post,
+.entry-content > div:not(.jetpack-video-wrapper):not(.tiled-gallery) {
+	@include content-width();
+}
+
+/* Special width. */
+blockquote,
+.tiled-gallery,
+.jetpack-video-wrapper {
+	max-width: 100%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+/* Flex container. */
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Fullscreen. */
+.fullscreen {
+	height: 960px;
+	height: 100vh;
+	width: 100%;
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	background-position: center!important;
+}
+
+/* Overlay. */
+.overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $color__background-overlay;
+}
+
+/* Text shadow. */
+.site-title,
+.site-first-letter,
+.featured-header,
+.featured-excerpt,
+.featured-more,
+.single-header,
+.single-meta,
+.page-title,
+.cat-links,
+.post-navigation {
+	text-shadow: 0px 0px 2px $color__text-main;
+}
+
+/* Borders. */
+.author-info,
+.post-navigation,
+.comments-area,
+#after-post .widget {
+	border-top: 3px dashed #dcdcdc;
+}
+#after-post .jetpack_subscription_widget::before {
+	content: "";
+	display: block;
+	position: relative;
+	top: -70px;
+	left: -20px;
+	width: calc( 100% + 40px );
+	border-top: 3px dashed #dcdcdc;
+}
+
+/* Transitions. */
+a,
+.post-navigation span,
+.featured-more::after,
+.search-submit .genericon-search,
+.format-image .entry-title {
+	transition: color 0.2s;
+}
+.more-link,
+.post-navigation a,
+.social-navigation a,
+.site-first-letter,
+.site-icon,
+.site-title,
+.menu-toggle,
+.overlay,
+.flickity-prev-next-button,
+.post-categories li a {
+	transition: background 0.2s;
+}
+input.submit,
+.reply a,
+.tagcloud a,
+.tags-links a,
+.tags-links a::before,
+.author-description a {
+	transition: all 0.2s;
+}
+
+/* Selection. */
+::selection {
+	color: white;
+	background-color: $color__background-selection;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	.tiled-gallery,
+	.jetpack-video-wrapper {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}

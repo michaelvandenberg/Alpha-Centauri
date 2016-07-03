@@ -1,0 +1,60 @@
+.blog .content-area,
+.archive .content-area {
+	background: $color__background-blog;
+}
+
+.blog .site-main,
+.archive .site-main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+article {
+	padding: 40px 0;
+}
+
+.blog article,
+.archive article {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	padding-bottom: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.article-inner {
+	.entry-title {
+		margin-top: 0;
+	}
+}
+
+#secondary,
+#after-post {
+	padding-bottom: 60px;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+	.blog article,
+	.archive article {
+		width: 50%;
+		padding-bottom: 50%;
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+
+}
+
+@media screen and (min-width: $breakpoint-large) {
+	.blog article,
+	.archive article {
+		width: 33.33333%;
+		padding-bottom: 33.33333%;
+	}
+	.blog article:nth-child(3n+2),
+	.archive article:nth-child(3n+2) {
+		width: 33.33337%;
+	}
+}

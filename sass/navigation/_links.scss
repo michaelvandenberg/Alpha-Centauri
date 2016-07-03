@@ -1,0 +1,34 @@
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+#hidden-header a,
+.site-footer a,
+.post-navigation a {
+	color: $color__link-footer;
+
+	&:visited {
+		color: $color__link-footer-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-footer-hover;
+	}
+}

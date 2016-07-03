@@ -1,0 +1,135 @@
+.article-inner {
+	.entry-title a,
+	.entry-title a:visited {
+		color: $color__text-blog;
+		text-decoration: none;
+	}
+	.entry-title a:hover,
+	.entry-title a:focus,
+	.entry-title a:active,
+	.read-more-link:hover,
+	.read-more-link:focus,
+	.read-more-link:active {
+		color: $color__link-hover;
+	}
+
+	.entry-title,
+	.entry-read-more {
+		text-align: center;
+	}
+}
+
+article .overlay:hover {
+	background-color: $color__background-overlay-hover;
+}
+
+.entry-read-more a {
+	padding: 4px 8px;
+	color: $color__text-blog;
+	text-decoration: none;
+	border: 2px solid $color__text-blog; 
+	background: $color__background-overlay;
+}
+
+.entry-content p.large {
+	width: 100%;
+
+	img {
+		margin: 0 auto;
+	}
+}
+
+.tags-links a {
+	display: inline-block;
+	position: relative;
+	margin: 6px 0 6px 24px;
+	padding: 5px 12px 7px;
+	background: $color__background-tags;
+	font-weight: 700;
+	@include font-size(1);
+	text-transform: lowercase;
+	text-decoration: none;
+	color: #353535;
+}
+.tags-links a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -18px;
+	border-color: transparent $color__background-tags transparent transparent;
+	border-style: solid;
+	border-width: 18px 18px 18px 0;
+}
+.tags-links a::after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: white;
+}
+.tags-links a:hover,
+.tags-links a:focus {
+	color: $color__text-blog;
+	background: $color__text-main;
+}
+.tags-links a:hover::before,
+.tags-links a:focus::before {
+	border-right-color: $color__text-main;
+}
+
+.post-categories li {
+	display: inline-block;
+	margin: 0 0.0625em;
+
+	a {
+		display: block;
+		padding: 0.125em 0.25em;
+		border: 2px solid white;
+		background: $color__background-overlay;
+
+		&:hover {
+			color: white;
+			background: $color__background-overlay-hover;
+		}
+	}
+}
+
+.edit-link {
+	margin-left: 0.75em;
+}
+
+.no-featured-img .single-header,
+.no-featured-img .page-title {
+	margin-top: 40px;
+}
+
+.no-results,
+.not-found {
+	padding-bottom: 40px;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

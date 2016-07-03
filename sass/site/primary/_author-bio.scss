@@ -1,0 +1,47 @@
+.author-info {
+	display: flex;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include font-size(1.125);
+}
+
+.author-heading {
+	margin-top: 0;
+}
+.author-avatar {
+	display: flex;
+	align-items: center;
+	min-width: 98px;
+	max-width: 98px;
+	margin-right: 1rem;
+}
+.author-title {
+	margin: 0 0 0.25rem 0;
+}
+.author-bio {
+	margin: 0 0 1rem 0;
+}
+
+.author-description a {
+	background: transparent;
+	border: 2px solid;
+	@include font-size(1);
+	line-height: 1;
+	padding: .4em .8em .3em;
+	border-color: $color__border-button;
+	color: $color__text-main;
+	text-decoration: none;
+
+	&:hover {
+		color: $color__text-blog;
+		border-color: $color__border-button-hover;
+		background: $color__background-button;
+	}
+
+	&:active,
+	&:focus {
+		color: $color__text-blog;
+		border-color: $color__border-button-focus;
+		background: $color__background-button;
+	}
+}

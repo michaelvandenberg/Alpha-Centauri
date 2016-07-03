@@ -1,0 +1,24 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+.entry-content,
+.site-footer,
+.comments-area {
+	line-height: 1.75;
+
+	.first {
+		line-height: 1.6;
+	}
+}
+
+@import "headings";
+
+@import "copy";

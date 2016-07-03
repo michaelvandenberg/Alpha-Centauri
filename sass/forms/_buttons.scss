@@ -1,0 +1,50 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 3px solid;
+	@include font-size(1.125);
+	line-height: 1;
+	padding: .6em 1em .4em;
+
+	&:focus {
+		outline: thin dotted;
+	}
+}
+
+/* Button-like elements. */
+.widget_tag_cloud a,
+.reply a {
+	display: inline-block;
+	border: 2px solid;
+	line-height: 1;
+	padding: .4em .8em .3em;
+	text-decoration: none;
+	@include font-size(1);
+	margin-bottom: 6px;
+}
+
+/* Color of both buttons and button-like elements. */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.widget_tag_cloud a,
+.reply a {
+	border-color: $color__border-button;
+	color: $color__text-main;
+	background: transparent;
+
+	&:hover {
+		color: $color__text-blog;
+		border-color: $color__border-button-hover;
+		background: $color__background-button;
+	}
+
+	&:active,
+	&:focus {
+		color: $color__text-blog;
+		border-color: $color__border-button-focus;
+		background: $color__background-button;
+	}
+}
