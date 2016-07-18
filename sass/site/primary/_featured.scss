@@ -142,7 +142,8 @@
 }
 .page-title,
 .single-title,
-.featured-title {
+.featured-title,
+.site-description-big {
 	margin: 0;
 	@include font-size(2);
 }
@@ -157,7 +158,8 @@
 .featured-more,
 .featured-more:visited,
 .featured-more::after,
-.featured-more::after {
+.featured-more::after,
+.site-description-big {
 	color: $color__text-menu;
 	text-align: center;
 	text-decoration: none;
@@ -221,7 +223,8 @@
 @media screen and (min-width: $breakpoint-small) {
 	.page-title,
 	.single-title,
-	.featured-title {
+	.featured-title,
+	.site-description-big {
 		@include font-size(2.5);
 	}
 	.flickity-prev-next-button {
@@ -238,7 +241,8 @@
 @media screen and (min-width: $breakpoint-medium) {
 	.page-title,
 	.single-title,
-	.featured-title {
+	.featured-title,
+	.site-description-big {
 		@include font-size(3);
 	}
 }

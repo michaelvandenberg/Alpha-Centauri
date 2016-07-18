@@ -30,7 +30,7 @@ $custom_copyright = get_theme_mod( 'alpha_centauri_custom_copyright' );
 		</div><!-- .footer-inner -->
 	</footer><!-- #colophon -->
 
-	<a href="#content" class="back-to-top">Top</a>
+	<a href="#content" class="back-to-top"><?php echo esc_html_x( 'Top', 'Back to top: four letters max.', 'alpha-centauri' ); ?></a>
 
 </div><!-- #page -->
 

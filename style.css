@@ -4,7 +4,7 @@ Theme URI: http://michaelvandenberg.com/portfolio/alpha-centauri/
 Author: Michael Van Den Berg
 Author URI: https://michaelvandenberg.com/
 Description: Give your site an unique look with the Alpha Centauri theme for WordPress. With a focus on chrystal clear typography and extra space for large images, galleries and videos, this is a perfect theme for photobloggers. Alpha Centauri comes packed with a full screen slider, a special menu for your social links, and is responsive and accessibility-ready. Check the demo at: https://michaelvandenberg.com/portfolio/alpha-centauri/
-Version: 0.9.2
+Version: 0.9.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: alpha-centauri
@@ -285,7 +285,7 @@ textarea {
 .entry-content,
 .site-footer,
 .comments-area {
-  line-height: 1.75;
+  line-height: 1.7;
 }
 .entry-content .first,
 .site-footer .first,
@@ -856,6 +856,10 @@ blockquote,
   background: rgba(0, 0, 0, 0.25);
 }
 
+a.overlay {
+  text-decoration: none;
+}
+
 /* Text shadow. */
 .site-title,
 .site-first-letter,
@@ -864,6 +868,7 @@ blockquote,
 .featured-more,
 .single-header,
 .single-meta,
+.entry-title,
 .page-title,
 .cat-links,
 .post-navigation {
@@ -893,7 +898,9 @@ a,
 .post-navigation span,
 .featured-more::after,
 .search-submit .genericon-search,
-.format-image .entry-title {
+.format-image .entry-title,
+.entry-title,
+.read-more-link {
   -webkit-transition: color 0.2s;
           transition: color 0.2s;
 }
@@ -913,6 +920,8 @@ a,
 }
 
 input.submit,
+.entry-header,
+.entry-read-more,
 .reply a,
 .tagcloud a,
 .tags-links a,
@@ -1535,6 +1544,7 @@ a:hover, a:active {
   text-decoration: none;
   -webkit-transition: -webkit-transform 0.2s;
           transition: transform 0.2s;
+  background: #202020;
 }
 .social-menu-wrapper a::before {
   content: '\f475';
@@ -1954,17 +1964,12 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.article-inner .entry-title a,
-.article-inner .entry-title a:visited {
+.article-inner .entry-title {
   color: white;
   text-decoration: none;
 }
-.article-inner .entry-title a:hover,
-.article-inner .entry-title a:focus,
-.article-inner .entry-title a:active,
-.article-inner .read-more-link:hover,
-.article-inner .read-more-link:focus,
-.article-inner .read-more-link:active {
+.article-inner .entry-title:hover,
+.article-inner .read-more-link:hover {
   color: #cc0000;
 }
 .article-inner .entry-title,
@@ -1972,16 +1977,45 @@ a:hover, a:active {
   text-align: center;
 }
 
-article .overlay:hover {
+article .overlay:hover,
+article .overlay:focus {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.entry-read-more a {
+article .overlay:hover .entry-read-more,
+article .overlay:focus .entry-read-more {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+article .overlay:hover .article-inner .entry-header,
+article .overlay:focus .article-inner .entry-header {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.entry-read-more {
+  opacity: 0;
+  -webkit-transform: translateY(2em);
+      -ms-transform: translateY(2em);
+          transform: translateY(2em);
+}
+
+.entry-read-more span {
   padding: 4px 8px;
   color: white;
   text-decoration: none;
   border: 2px solid white;
   background: rgba(0, 0, 0, 0.25);
+}
+
+.article-inner .entry-header {
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 .entry-content p.large {
@@ -2087,6 +2121,11 @@ article .overlay:hover {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+/* Clear floating images in the post content. */
+.entry-footer {
+  clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -2253,7 +2292,8 @@ article .overlay:hover {
 
 .page-title,
 .single-title,
-.featured-title {
+.featured-title,
+.site-description-big {
   margin: 0;
   font-size: 32px;
   font-size: 2rem;
@@ -2270,7 +2310,8 @@ article .overlay:hover {
 .featured-more,
 .featured-more:visited,
 .featured-more::after,
-.featured-more::after {
+.featured-more::after,
+.site-description-big {
   color: white;
   text-align: center;
   text-decoration: none;
@@ -2343,7 +2384,8 @@ article .overlay:hover {
 @media screen and (min-width: 720px) {
   .page-title,
   .single-title,
-  .featured-title {
+  .featured-title,
+  .site-description-big {
     font-size: 40px;
     font-size: 2.5rem;
   }
@@ -2363,7 +2405,8 @@ article .overlay:hover {
 @media screen and (min-width: 960px) {
   .page-title,
   .single-title,
-  .featured-title {
+  .featured-title,
+  .site-description-big {
     font-size: 48px;
     font-size: 3rem;
   }

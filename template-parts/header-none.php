@@ -30,6 +30,12 @@
 				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'alpha-centauri' ); ?></h1>
 			</header><!-- .page-header 404 page can't be found -->
 		<?php
+		elseif ( is_home() ) : ?>
+			<?php $description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) { ?>
+				<div class="single-header"><p class="site-description-big"><?php echo $description; ?></p></div>
+			<?php } ?>
+		<?php
 		else :
 			the_title( '<div class="single-header"><h1 class="single-title">', '</h1></div>' );
 		endif;

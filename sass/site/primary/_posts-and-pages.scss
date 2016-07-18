@@ -1,15 +1,10 @@
 .article-inner {
-	.entry-title a,
-	.entry-title a:visited {
+	.entry-title {
 		color: $color__text-blog;
 		text-decoration: none;
 	}
-	.entry-title a:hover,
-	.entry-title a:focus,
-	.entry-title a:active,
-	.read-more-link:hover,
-	.read-more-link:focus,
-	.read-more-link:active {
+	.entry-title:hover,
+	.read-more-link:hover {
 		color: $color__link-hover;
 	}
 
@@ -19,16 +14,37 @@
 	}
 }
 
-article .overlay:hover {
+article .overlay:hover,
+article .overlay:focus {
 	background-color: $color__background-overlay-hover;
 }
 
-.entry-read-more a {
+article .overlay:hover .entry-read-more,
+article .overlay:focus .entry-read-more {
+	opacity: 1;
+	transform: translateY( 0 );
+}
+
+article .overlay:hover .article-inner .entry-header,
+article .overlay:focus .article-inner .entry-header {
+	transform: translateY( 0 );
+}
+
+.entry-read-more {
+	opacity: 0;
+	transform: translateY( 2em );
+}
+
+.entry-read-more span {
 	padding: 4px 8px;
 	color: $color__text-blog;
 	text-decoration: none;
 	border: 2px solid $color__text-blog; 
 	background: $color__background-overlay;
+}
+
+.article-inner .entry-header {
+	transform: translateY( 30px );
 }
 
 .entry-content p.large {
@@ -132,4 +148,9 @@ article .overlay:hover {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/* Clear floating images in the post content. */
+.entry-footer {
+	clear: both;
 }

@@ -12,17 +12,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); alpha_centauri_post_thumbnail(); ?>>
 	<?php 
 	if ( ! is_single() ) : ?>
-		<div class="overlay">
+		<a class="overlay" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
 			<div class="article-inner">
 				<header class="entry-header">
-					<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-read-more">
-					<a class="read-more-link" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a>
+					<span class="read-more-link"><?php esc_html_e( 'Read More', 'alpha-centauri' ); ?></span>
 				</div><!-- .entry-read-more -->
 			</div><!-- .article-inner -->
-		</div><!-- .overlay -->
+		</a><!-- .overlay -->
 	<?php 
 	endif; ?>
 

@@ -76,6 +76,9 @@ blockquote,
 	left: 0;
 	background: $color__background-overlay;
 }
+a.overlay {
+	text-decoration: none;
+}
 
 /* Text shadow. */
 .site-title,
@@ -85,6 +88,7 @@ blockquote,
 .featured-more,
 .single-header,
 .single-meta,
+.entry-title,
 .page-title,
 .cat-links,
 .post-navigation {
@@ -113,7 +117,9 @@ a,
 .post-navigation span,
 .featured-more::after,
 .search-submit .genericon-search,
-.format-image .entry-title {
+.format-image .entry-title,
+.entry-title,
+.read-more-link {
 	transition: color 0.2s;
 }
 .more-link,
@@ -129,6 +135,8 @@ a,
 	transition: background 0.2s;
 }
 input.submit,
+.entry-header,
+.entry-read-more,
 .reply a,
 .tagcloud a,
 .tags-links a,

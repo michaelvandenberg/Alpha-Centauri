@@ -1,5 +1,5 @@
 Alpha Centauri
-Theme Version: 0.9.2
+Theme Version: 0.9.3
 Author: Michael Van Den Berg 
 Author URL: https://michaelvandenberg.com/
 
@@ -90,6 +90,15 @@ After installing and activating the Jetpack plugin follow these steps:
 === Changelog ===
 --------------------
 
+*
+* 0.9.3 / 18.07.2016
+* - The back-to-top button text (top) is now translatable.
+* - Updated the language pot file.
+* - Floating images are cleared in post/page-content.
+* - Fixed default background-color for social links.
+* - Fixed default title for the blog page if there is no featured content.
+* - Reduced line-height for content a little bit to 1.7 (from 1.75).
+* - And a few little tweaks to content.php and it's styles.
 *
 * 0.9.2 / 03.07.2016
 * - Improved alpha-centauri.js by using single quotes instead of mixed quotes.
