@@ -23,9 +23,9 @@ $custom_copyright = get_theme_mod( 'alpha_centauri_custom_copyright' );
 				<?php } else { ?>
 					<div class="copyright"><span class="symbol">&copy; </span><?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a><span class="sep"> – </span><span class="description"><?php bloginfo( 'description' ); ?>.</span></div>
 				<?php } ?>				
-				<span class="generator"><?php echo esc_html__( 'Powered by ', 'alpha-centauri' ); ?><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" rel="generator">WordPress</a></span>
+				<span class="generator"><?php echo esc_html__( 'Powered by ', 'alpha-centauri' ); ?><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'alpha-centauri' ) ); ?>" rel="generator">WordPress</a></span>
 				<span class="sep"> | </span>
-				<span class="designer"><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'alpha-centauri' ), '<a href="http://michaelvandenberg.com/portfolio/alpha-centauri/" rel="theme">Alpha Centauri</a>', 'Michael Van Den Berg' ); ?></span>
+				<span class="designer"><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'alpha-centauri' ), '<a href="https://michaelvandenberg.com/themes/#alpha-centauri" rel="theme">Alpha Centauri</a>', 'Michael Van Den Berg' ); ?></span>
 			</div><!-- .site-info -->
 		</div><!-- .footer-inner -->
 	</footer><!-- #colophon -->

@@ -1,5 +1,5 @@
 Alpha Centauri
-Theme Version: 0.9.3
+Theme Version: 1.0.0
 Author: Michael Van Den Berg 
 Author URL: https://michaelvandenberg.com/
 
@@ -15,7 +15,7 @@ Give your site an unique look with the Alpha Centauri theme for WordPress. With 
 --------------------
 
 Alpha Centauri WordPress Theme, Copyright 2016 Michael Van Den Berg.
-Alpha Centauri is distributed under the terms of the GNU GPL license 2.0 or later.
+Alpha Centauri is distributed under the terms of the GNU GPL license 3.0 or later.
 
 Alpha Centauri is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 
@@ -90,6 +90,12 @@ After installing and activating the Jetpack plugin follow these steps:
 === Changelog ===
 --------------------
 
+*
+* 1.0.0 / 25.11.2016
+* - Changed theme URI to: https://michaelvandenberg.com/themes/#alpha-centauri
+* - Made the WordPress url in the footer translatable.
+* - Removed support for html5 searchform in functions.php.
+* - Changed theme license from GPL 2.0 to GPL 3.0 (because of Flickity).
 *
 * 0.9.3 / 18.07.2016
 * - The back-to-top button text (top) is now translatable.
