@@ -22,7 +22,7 @@
 
 	<div class="author-description">
 		<h2 class="author-title">
-			<span class="screen-reader-text author-published-by"><?php esc_html_e( 'Published by ', 'magnum-opus' ); ?></span>
+			<span class="screen-reader-text author-published-by"><?php esc_html_e( 'Published by ', 'alpha-centauri' ); ?></span>
 			<span class="the-author"><?php echo esc_html( get_the_author() ); ?></span>
 		</h2>
 
